@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "PetCare",
+    "slug": "petcare",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "description": "A local-first mobile organizer for pet profiles, care records, feeding details, and appointments.",
+    "icon": "./assets/petcare-icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "PetCare uses the camera when you choose to add a pet photo.",
+        "NSPhotoLibraryUsageDescription": "PetCare uses your photo library when you choose a pet photo."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#246B58",
+        "foregroundImage": "./assets/petcare-icon.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "CAMERA",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/petcare-favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow PetCare to select a photo for your pet.",
+          "cameraPermission": "Allow PetCare to take a photo of your pet."
+        }
+      ],
+      "expo-notifications",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#246B58",
+          "image": "./assets/petcare-icon.png",
+          "imageWidth": 200
+        }
+      ]
+    ]
+  }
+}
