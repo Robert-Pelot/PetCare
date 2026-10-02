@@ -95,7 +95,6 @@ Camera, photo-library, and notification permissions are requested only when the 
 - Jest with `jest-expo`
 - ESLint and strict TypeScript checks
 - GitHub Actions continuous integration
-- Dependabot monitoring for npm and GitHub Actions updates
 
 ## Getting started
 
