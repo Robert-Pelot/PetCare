@@ -53,7 +53,7 @@ The application intentionally keeps pet records on the device. There is no share
 - Local appointment reminders with Expo Notifications
 - Domain logic separated from UI code
 - Unit testing of validation, date handling, sorting, reminder calculations, and care-log grouping
-- Automated linting, type checking, testing, dependency auditing, and web bundling in CI
+- Automated linting, type checking, testing, dependency advisory reporting, critical-vulnerability gating, and web bundling in CI
 
 ## Key features
 
@@ -141,7 +141,9 @@ npm run test:ci
 npx expo export --platform web
 ```
 
-The unit suite covers profile normalization and validation, real calendar-date validation, non-mutating appointment sorting, upcoming appointment selection, reminder calculations, and care-log grouping. GitHub Actions repeats linting, type checking, testing, a high-severity dependency audit, and a production web bundle on every pull request and every push to `main`.
+The unit suite covers profile normalization and validation, real calendar-date validation, non-mutating appointment sorting, upcoming appointment selection, reminder calculations, and care-log grouping. GitHub Actions repeats linting, type checking, testing, production dependency advisory reporting, a critical-severity vulnerability gate, and a production web bundle on every pull request and every push to `main`.
+
+The advisory step remains visible even when an upstream Expo/CLI dependency has a non-critical advisory; CI still fails if a critical production dependency vulnerability is reported.
 
 ## Project structure
 
